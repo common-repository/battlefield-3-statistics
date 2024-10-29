@@ -1,0 +1,27 @@
+<p>
+	<label for="<?php echo $this->get_field_id('player'); ?>"><?php echo _e('Player:'); ?></label><br>
+	<input class="widefat" id="<?php echo $this->get_field_id('player'); ?>" name="<?php echo $this->get_field_name('player'); ?>" type="text" value="<?php echo $player; ?>">
+</p>
+
+<p>
+	<label for="<?php echo $this->get_field_id('platform'); ?>"><?php echo _e('Platform:'); ?></label><br>
+	<select id="" id="<?php echo $this->get_field_id('platform'); ?>" name="<?php echo $this->get_field_name('platform'); ?>">
+		<option value="pc" <?php echo ($platform == 'pc') ? 'selected' : '';?>>PC</option>
+		<option value="ps3" <?php echo ($platform == 'ps3') ? 'selected' : '';?>>PS3</option>
+		<option value="360" <?php echo ($platform == '360') ? 'selected' : '';?>>Xbox 360</option>
+	</select>
+</p>
+
+<p>
+	<label for="<?php echo $this->get_field_id('cacheTime'); ?>"><?php echo _e('Cache time:'); ?></label><br>
+	<select id="" id="<?php echo $this->get_field_id('cacheTime'); ?>" name="<?php echo $this->get_field_name('cacheTime'); ?>">
+		<?php foreach($cacheTimeValues as $time => $minutes) : ?>
+		<option value="<?php echo $time; ?>" <?php echo ($cacheTime == $time) ? 'selected' : '';?>><?php echo $minutes; ?></option>
+		<?php endforeach; ?>
+	</select>
+</p>
+
+<p>
+	<span style="color:red">Automatic update will be here soon!!!</span><br>
+	<a href="http://bf3stats.com/stats_<?php echo $platform . '/' . $player; ?>" target="_blank">Manual Update</a>
+</p>

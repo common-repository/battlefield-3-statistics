@@ -1,0 +1,36 @@
+<?php echo $args['before_widget']; ?>
+<?php echo "{$args['before_title']} Battlefield 3 Statistics {$args['after_title']}"; ?>
+			
+<p>
+	<br>
+	<img src="http://files.bf3stats.com/img/bf3/<?php echo $stats['img'];?>"><br>
+	
+	<strong>Player</strong><br>
+	<?php echo $player; ?>
+	<br><br>
+	
+	<strong>Progress</strong><br>
+	<?php echo "{$stats['score_current']} / {$stats['score_needed']} ({$stats['process']}%)"; ?>
+	<br><br>
+
+	<strong>K/D ratio</strong><br>
+	<?php echo "{$stats['kd-ratio']} ({$stats['kills']} / {$stats['deaths']})"; ?>
+	<br><br>
+	
+	<strong>W/L ratio</strong><br>
+	<?php echo "{$stats['wl-ratio']} ({$stats['wins']} / {$stats['losses']})"; ?>
+	<br><br>
+	
+	<strong>Accuracy</strong><br>
+	<?php echo $stats['accuracy']; ?><br><br>
+	
+	<strong>Longest headshot</strong><br>
+	<?php echo "{$stats['longest-headshot']} meters"; ?>
+	
+</p>
+
+<p style="font-size:10px;text-align:center">
+	<?php echo $stats['last-update']; ?>
+</p>
+
+<?php echo $args['after_widget']; ?>
